@@ -1,5 +1,5 @@
 import numpy as np
-from io import StringIO  # (SỬA 1) import đúng lớp StringIO
+from io import StringIO  
 
 def Floyd(matrix):
     mat=[ row[:] for row in matrix]
@@ -38,7 +38,7 @@ def read_csv():
             break
         lines.append(line)
 
-    data = "\n".join(lines)  # nối các dòng thành chuỗi CSV
+    data = "\n".join(lines)  
     matran1 = np.loadtxt(StringIO(data), delimiter=',')
     for row in matran1:
         print(row)
