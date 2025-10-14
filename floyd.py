@@ -29,7 +29,7 @@ def nhap():
 
 def read_csv():
     print("Dán dữ liệu CSV vào đây (xong thì Enter 2 lần):")
-    global matran1  # (SỬA 2) gán vào biến global
+    global matran1  
 
     lines = []
     while True:
