@@ -3,11 +3,10 @@ from io import StringIO
 
 def Floyd(matrix):
     mat=[ row[:] for row in matrix]
-    col=len(mat[0])
-    row=len(mat)
-    for k in range(max(col,row)):
-        for c in range(col):
-            for r in range(row):
+    n=len(mat[0])
+    for k in range(n):
+        for c in range(n):
+            for r in range(n):
                 mat[c][r]=min(mat[c][r], mat[c][k]+mat[k][r])
     return mat
 
@@ -15,11 +14,10 @@ matran1=[]
 matran2=[]
 
 def nhap():
-    r=int(input("Nhập số hàng của ma trận: "))
-    c=int(input("Nhập số cột của ma trận: "))
+    r=int(input("Nhập số hàng(cột) của ma trận: "))
     for i in range(r):
         hang=list(map(float,input(f"Hàng {i+1}: ").split()))
-        if len(hang)!=c:
+        if len(hang)!=r:
             print("Dữ liệu đã bị sai")
             hang=list(map(float,input(f"Hàng {i+1}: ").split()))
         matran1.append(hang)
@@ -51,6 +49,6 @@ elif o==2:
 
 matran2=Floyd(matran1)
 
-print("Mat trận khoảng cách tối ưu là:")
+print("Ma trận khoảng cách tối ưu là:")
 for row in matran2: 
     print(row)
