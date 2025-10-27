@@ -26,7 +26,7 @@ def nhap():
         print(row)
 
 def read_csv():
-    print("Dán dữ liệu CSV vào đây (xong thì Enter 2 lần):")
+    print("Dán dữ liệu CSV vào đây :")
     global matran1  
 
     lines = []
